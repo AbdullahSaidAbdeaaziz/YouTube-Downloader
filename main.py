@@ -32,6 +32,9 @@ def menu() -> None:
                         all_res.append(l)
 
                 quality = str(input(f"Enter quality {all_res}: "))
+                if not quality.endswith("p"):
+                    print(f"Valid Quality {quality} +  p not {quality}")
+                    quality = str(input(f"Enter quality {all_res}: "))
                 if quality not in res:
                     print("sorry this is Quality not available.\n")
                     quality = str(input(f"Enter quality {all_res}: "))
@@ -55,6 +58,8 @@ def menu() -> None:
                         if ls.streams.get_by_resolution(quality) is not None:
                             f_p.add(quality)
                 quality = input(f"Enter quality {f_p}: ")
+                if not quality.endswith("p"):
+                    print(f"Valid Quality {quality} +  p not {quality}")
                 if quality not in f_p:
                     print("sorry this is Quality not available for all Videos.\n")
                     quality = input(f"Enter quality {f_p}: ")
