@@ -1,7 +1,10 @@
+import tkinter
+
 from pytube import *
 from pytube import YouTube
 from pytube.cli import on_progress
-
+from tkinter import Tk
+from tkinter.filedialog import askdirectory
 res = ["144p", "240p", "360p", "480p", "720p"]
 all_res = []
 f_p = set()
@@ -32,9 +35,9 @@ def menu() -> None:
                 if quality not in res:
                     print("sorry this is Quality not available.\n")
                     quality = str(input(f"Enter quality {all_res}: "))
-                path = input(r"Enter Path to save video on it, Depend on (OS) {Linux, Windows, "
-                             r"Mac} <'c:\Users\2011\balbal'>: ")
-
+                    print("choose place 😀")
+                path = askdirectory(title='Select Folder')
+                tkinter.Tk().withdraw()
                 print("Video is Downloading.........\n")
 
                 video.streams.get_by_resolution(quality).download(output_path=path)
@@ -55,8 +58,8 @@ def menu() -> None:
                 if quality not in f_p:
                     print("sorry this is Quality not available for all Videos.\n")
                     quality = input(f"Enter quality {f_p}: ")
-                path = input(r"Enter Path to save Playlist on it, Depend on (OS) {Linux, Windows, "
-                             r"Mac} <'c:\Users\2011\bal'>: ")
+                path = askdirectory(title='Select Folder')
+                tkinter.Tk().withdraw()
 
                 print("Videos is Downloading.........\n")
 
