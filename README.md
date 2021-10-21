@@ -6,4 +6,4 @@ Download videos and playlist from YouTube
 
 ## How I do that ?
 
-I used **[pytube](https://pytube.io/en/latest/index.html)**.
+I used **![pytube](https://pytube.io/en/latest/index.html)**.
