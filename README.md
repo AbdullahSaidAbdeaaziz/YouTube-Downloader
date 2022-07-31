@@ -1,8 +1,18 @@
 # YouTube-Downloader
 Download videos and playlist from YouTube
 
-## Just Run `YouTubeDownloader.exe` file
-# `Res/YouTubeDownloader.exe`
+- Install Requirements
+
+```bach
+pip install -r requirements.txt
+```
+
+- Run
+```bash
+python main.py
+```
+
+
 
 ## How I do that ?
 
